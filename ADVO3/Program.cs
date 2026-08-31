@@ -39,78 +39,110 @@
             //            List<string> gradeStrings = grades.Select(g => $"Grade: {g}").ToList();
             //            Console.WriteLine(string.Join(", ", gradeStrings));
 
-//            ## Exercise 2: Leaderboard
-//SortedDictionary<int, string> leaderboard = new SortedDictionary<int, string>();
+            //            ## Exercise 2: Leaderboard
+            //SortedDictionary<int, string> leaderboard = new SortedDictionary<int, string>();
 
-//            // 1. Add players
-//            leaderboard.Add(500, "Ahmed");
-//            leaderboard.Add(200, "Sara");
-//            leaderboard.Add(800, "Ali");
-//            leaderboard.Add(350, "Mona");
+            //            // 1. Add players
+            //            leaderboard.Add(500, "Ahmed");
+            //            leaderboard.Add(200, "Sara");
+            //            leaderboard.Add(800, "Ali");
+            //            leaderboard.Add(350, "Mona");
 
-//            // 2. Print all entries
-//            foreach (var player in leaderboard)
-//            {
-//                Console.WriteLine($"{player.Key} = {player.Value}");
-//            }
+            //            // 2. Print all entries
+            //            foreach (var player in leaderboard)
+            //            {
+            //                Console.WriteLine($"{player.Key} = {player.Value}");
+            //            }
 
-//            // 3. Access the first key and first value
-//            Console.WriteLine("First Key: " + leaderboard.First().Key);
-//            Console.WriteLine("First Value: " + leaderboard.First().Value);
+            //            // 3. Access the first key and first value
+            //            Console.WriteLine("First Key: " + leaderboard.First().Key);
+            //            Console.WriteLine("First Value: " + leaderboard.First().Value);
 
-//            // 4. Check if score 500 exists
-//            Console.WriteLine("Score 500 Exists: " + leaderboard.ContainsKey(500));
+            //            // 4. Check if score 500 exists
+            //            Console.WriteLine("Score 500 Exists: " + leaderboard.ContainsKey(500));
 
-//            // 5. Safely get player with score 999
-//            if (leaderboard.TryGetValue(999, out string playerName))
-//                Console.WriteLine("Player: " + playerName);
-//            else
-//                Console.WriteLine("Player not found");
+            //            // 5. Safely get player with score 999
+            //            if (leaderboard.TryGetValue(999, out string playerName))
+            //                Console.WriteLine("Player: " + playerName);
+            //            else
+            //                Console.WriteLine("Player not found");
 
-//            // 6. Remove score 200 and print updated list
-//            leaderboard.Remove(200);
+            //            // 6. Remove score 200 and print updated list
+            //            leaderboard.Remove(200);
 
-//            foreach (var player in leaderboard)
-//            {
-//                Console.WriteLine($"{player.Key} = {player.Value}");
-//            }
+            //            foreach (var player in leaderboard)
+            //            {
+            //                Console.WriteLine($"{player.Key} = {player.Value}");
+            //            }
 
-//            ## Exercise 3: Phone Book
-//Dictionary<string, string> phoneBook = new Dictionary<string, string>
-//{
-//    { "Ahmed", "01011111111" },
-//    { "Sara", "01022222222" },
-//    { "Ali", "01033333333" },
-//    { "Mona", "01044444444" }
-//};
+            //            ## Exercise 3: Phone Book
+            //Dictionary<string, string> phoneBook = new Dictionary<string, string>
+            //{
+            //    { "Ahmed", "01011111111" },
+            //    { "Sara", "01022222222" },
+            //    { "Ali", "01033333333" },
+            //    { "Mona", "01044444444" }
+            //};
 
-//            // 2. Add a new contact using [] syntax
-//            phoneBook["Omar"] = "01055555555";
+            //            // 2. Add a new contact using [] syntax
+            //            phoneBook["Omar"] = "01055555555";
 
-//            // 3. Try adding a duplicate using .Add()
-//            try
-//            {
-//                phoneBook.Add("Ahmed", "01111111111");
-//            }
-//            catch (ArgumentException ex)
-//            {
-//                Console.WriteLine(ex.Message);
-//            }
+            //            // 3. Try adding a duplicate using .Add()
+            //            try
+            //            {
+            //                phoneBook.Add("Ahmed", "01111111111");
+            //            }
+            //            catch (ArgumentException ex)
+            //            {
+            //                Console.WriteLine(ex.Message);
+            //            }
 
-//            // 4. Try adding a duplicate using .TryAdd()
-//            bool added = phoneBook.TryAdd("Sara", "01122222222");
-//            Console.WriteLine("TryAdd succeeded: " + added);
+            //            // 4. Try adding a duplicate using .TryAdd()
+            //            bool added = phoneBook.TryAdd("Sara", "01122222222");
+            //            Console.WriteLine("TryAdd succeeded: " + added);
 
-//            // 5. Search for a contact that doesn't exist
-//            Console.WriteLine("Contains Khaled: " + phoneBook.ContainsKey("Khaled"));
+            //            // 5. Search for a contact that doesn't exist
+            //            Console.WriteLine("Contains Khaled: " + phoneBook.ContainsKey("Khaled"));
 
-//            // 6. Get a contact with a fallback of "Not Found"
-//            string result = phoneBook.GetValueOrDefault("Khaled", "Not Found");
-//            Console.WriteLine("Khaled: " + result);
+            //            // 6. Get a contact with a fallback of "Not Found"
+            //            string result = phoneBook.GetValueOrDefault("Khaled", "Not Found");
+            //            Console.WriteLine("Khaled: " + result);
 
-//            // 7. Print all Keys and Values
-//            Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
-//            Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
+            //            // 7. Print all Keys and Values
+            //            Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
+            //            Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
+
+//            ## Exercise 4: Unique Email Validator
+//HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+
+//            emails.Add("ahmed@test.com");
+//            emails.Add("AHMED@test.com");
+//            emails.Add("sara@test.com");
+//            emails.Add("Sara@Test.Com");
+
+//            Console.WriteLine("Count: " + emails.Count);
+
+//            // Count = 2 because the HashSet is case-insensitive,
+//            // so emails that differ only in letter case are considered duplicates.
+
+//            HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+//            HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
+
+//            HashSet<int> union = new HashSet<int>(setA);
+//            union.UnionWith(setB);
+//            Console.WriteLine("Union: " + string.Join(", ", union));
+
+//            HashSet<int> intersect = new HashSet<int>(setA);
+//            intersect.IntersectWith(setB);
+//            Console.WriteLine("Intersection: " + string.Join(", ", intersect));
+
+//            HashSet<int> except = new HashSet<int>(setA);
+//            except.ExceptWith(setB);
+//            Console.WriteLine("Except: " + string.Join(", ", except));
+
+//            HashSet<int> subset = new HashSet<int> { 1, 2 };
+//            Console.WriteLine("Is Subset: " + subset.IsSubsetOf(setA));
+
 
 
 
