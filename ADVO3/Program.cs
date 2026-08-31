@@ -75,6 +75,45 @@
 //                Console.WriteLine($"{player.Key} = {player.Value}");
 //            }
 
+//            ## Exercise 3: Phone Book
+//Dictionary<string, string> phoneBook = new Dictionary<string, string>
+//{
+//    { "Ahmed", "01011111111" },
+//    { "Sara", "01022222222" },
+//    { "Ali", "01033333333" },
+//    { "Mona", "01044444444" }
+//};
+
+//            // 2. Add a new contact using [] syntax
+//            phoneBook["Omar"] = "01055555555";
+
+//            // 3. Try adding a duplicate using .Add()
+//            try
+//            {
+//                phoneBook.Add("Ahmed", "01111111111");
+//            }
+//            catch (ArgumentException ex)
+//            {
+//                Console.WriteLine(ex.Message);
+//            }
+
+//            // 4. Try adding a duplicate using .TryAdd()
+//            bool added = phoneBook.TryAdd("Sara", "01122222222");
+//            Console.WriteLine("TryAdd succeeded: " + added);
+
+//            // 5. Search for a contact that doesn't exist
+//            Console.WriteLine("Contains Khaled: " + phoneBook.ContainsKey("Khaled"));
+
+//            // 6. Get a contact with a fallback of "Not Found"
+//            string result = phoneBook.GetValueOrDefault("Khaled", "Not Found");
+//            Console.WriteLine("Khaled: " + result);
+
+//            // 7. Print all Keys and Values
+//            Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
+//            Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
+
+
+
 
         }
     }
