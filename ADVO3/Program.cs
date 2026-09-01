@@ -143,6 +143,38 @@
 //            HashSet<int> subset = new HashSet<int> { 1, 2 };
 //            Console.WriteLine("Is Subset: " + subset.IsSubsetOf(setA));
 
+        //    ## Exercise 5: Print Queue Simulator
+        //     Queue<string> documents = new Queue<string>();
+
+        //    documents.Enqueue("Report.pdf");
+        //    documents.Enqueue("Invoice.pdf");
+        //    documents.Enqueue("Letter.docx");
+        //    documents.Enqueue("Resume.pdf");
+        //    documents.Enqueue("Photo.jpg");
+
+        //    // 1. Print queue contents and Count
+        //    Console.WriteLine("Queue: " + string.Join(", ", documents));
+        //    Console.WriteLine("Count: " + documents.Count);
+
+        //    // 2. Peek
+        //    Console.WriteLine("Next Document: " + documents.Peek());
+
+        //    // 3. Process the queue
+        //    while (documents.Count > 0)
+        //    {
+        //        string document = documents.Dequeue();
+        //        Console.WriteLine("Printing: " + document);
+        //    }
+
+        //    // 4. TryDequeue on empty queue
+        //    bool result = documents.TryDequeue(out string? nextDocument);
+
+        //    Console.WriteLine("TryDequeue succeeded: " + result);
+        //    Console.WriteLine("Document: " + (nextDocument ?? "No document"));
+
+        //    What happens ?
+        //`TryDequeue` returns `false` and does not throw an exception because the queue is empty.
+                 
 
 
 
