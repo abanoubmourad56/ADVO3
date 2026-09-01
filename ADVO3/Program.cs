@@ -1,4 +1,6 @@
-﻿namespace ADVO3
+﻿using System.Collections;
+
+namespace ADVO3
 {
     internal class Program
     {
@@ -112,69 +114,103 @@
             //            Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
             //            Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));
 
-//            ## Exercise 4: Unique Email Validator
-//HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            //            ## Exercise 4: Unique Email Validator
+            //HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
 
-//            emails.Add("ahmed@test.com");
-//            emails.Add("AHMED@test.com");
-//            emails.Add("sara@test.com");
-//            emails.Add("Sara@Test.Com");
+            //            emails.Add("ahmed@test.com");
+            //            emails.Add("AHMED@test.com");
+            //            emails.Add("sara@test.com");
+            //            emails.Add("Sara@Test.Com");
 
-//            Console.WriteLine("Count: " + emails.Count);
+            //            Console.WriteLine("Count: " + emails.Count);
 
-//            // Count = 2 because the HashSet is case-insensitive,
-//            // so emails that differ only in letter case are considered duplicates.
+            //            // Count = 2 because the HashSet is case-insensitive,
+            //            // so emails that differ only in letter case are considered duplicates.
 
-//            HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
-//            HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
+            //            HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+            //            HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
 
-//            HashSet<int> union = new HashSet<int>(setA);
-//            union.UnionWith(setB);
-//            Console.WriteLine("Union: " + string.Join(", ", union));
+            //            HashSet<int> union = new HashSet<int>(setA);
+            //            union.UnionWith(setB);
+            //            Console.WriteLine("Union: " + string.Join(", ", union));
 
-//            HashSet<int> intersect = new HashSet<int>(setA);
-//            intersect.IntersectWith(setB);
-//            Console.WriteLine("Intersection: " + string.Join(", ", intersect));
+            //            HashSet<int> intersect = new HashSet<int>(setA);
+            //            intersect.IntersectWith(setB);
+            //            Console.WriteLine("Intersection: " + string.Join(", ", intersect));
 
-//            HashSet<int> except = new HashSet<int>(setA);
-//            except.ExceptWith(setB);
-//            Console.WriteLine("Except: " + string.Join(", ", except));
+            //            HashSet<int> except = new HashSet<int>(setA);
+            //            except.ExceptWith(setB);
+            //            Console.WriteLine("Except: " + string.Join(", ", except));
 
-//            HashSet<int> subset = new HashSet<int> { 1, 2 };
-//            Console.WriteLine("Is Subset: " + subset.IsSubsetOf(setA));
+            //            HashSet<int> subset = new HashSet<int> { 1, 2 };
+            //            Console.WriteLine("Is Subset: " + subset.IsSubsetOf(setA));
 
-        //    ## Exercise 5: Print Queue Simulator
-        //     Queue<string> documents = new Queue<string>();
+            //    ## Exercise 5: Print Queue Simulator
+            //     Queue<string> documents = new Queue<string>();
 
-        //    documents.Enqueue("Report.pdf");
-        //    documents.Enqueue("Invoice.pdf");
-        //    documents.Enqueue("Letter.docx");
-        //    documents.Enqueue("Resume.pdf");
-        //    documents.Enqueue("Photo.jpg");
+            //    documents.Enqueue("Report.pdf");
+            //    documents.Enqueue("Invoice.pdf");
+            //    documents.Enqueue("Letter.docx");
+            //    documents.Enqueue("Resume.pdf");
+            //    documents.Enqueue("Photo.jpg");
 
-        //    // 1. Print queue contents and Count
-        //    Console.WriteLine("Queue: " + string.Join(", ", documents));
-        //    Console.WriteLine("Count: " + documents.Count);
+            //    // 1. Print queue contents and Count
+            //    Console.WriteLine("Queue: " + string.Join(", ", documents));
+            //    Console.WriteLine("Count: " + documents.Count);
 
-        //    // 2. Peek
-        //    Console.WriteLine("Next Document: " + documents.Peek());
+            //    // 2. Peek
+            //    Console.WriteLine("Next Document: " + documents.Peek());
 
-        //    // 3. Process the queue
-        //    while (documents.Count > 0)
-        //    {
-        //        string document = documents.Dequeue();
-        //        Console.WriteLine("Printing: " + document);
-        //    }
+            //    // 3. Process the queue
+            //    while (documents.Count > 0)
+            //    {
+            //        string document = documents.Dequeue();
+            //        Console.WriteLine("Printing: " + document);
+            //    }
 
-        //    // 4. TryDequeue on empty queue
-        //    bool result = documents.TryDequeue(out string? nextDocument);
+            //    // 4. TryDequeue on empty queue
+            //    bool result = documents.TryDequeue(out string? nextDocument);
 
-        //    Console.WriteLine("TryDequeue succeeded: " + result);
-        //    Console.WriteLine("Document: " + (nextDocument ?? "No document"));
+            //    Console.WriteLine("TryDequeue succeeded: " + result);
+            //    Console.WriteLine("Document: " + (nextDocument ?? "No document"));
 
-        //    What happens ?
-        //`TryDequeue` returns `false` and does not throw an exception because the queue is empty.
-                 
+            //    What happens ?
+            //`TryDequeue` returns `false` and does not throw an exception because the queue is empty.
+
+
+//            ## Exercise 6: Browser History (Undo)
+
+//            Stack<string> history = new Stack<string>();
+
+//            history.Push("google.com");
+//            history.Push("github.com");
+//            history.Push("stackoverflow.com");
+//            history.Push("youtube.com");
+//            history.Push("claude.ai");
+
+//            // 2. Peek current page
+//            Console.WriteLine("Current Page: " + history.Peek());
+
+//            // 3. Press Back 3 times
+//            for (int i = 0; i < 3; i++)
+//            {
+//                string page = history.Pop();
+//                Console.WriteLine("Leaving: " + page);
+//            }
+
+//            // 4. Print current page
+//            Console.WriteLine("Current Page: " + history.Peek());
+
+//            // 5. Try TryPop on an empty stack
+//            bool result = history.TryPop(out string? pageAfterPop);
+
+//            Console.WriteLine("TryPop succeeded: " + result);
+//            Console.WriteLine("Page: " + (pageAfterPop ?? "No page"));
+
+//What happens ? 
+//`TryPop` returns `false` when the stack is empty and does not throw an exception.
+
+
 
 
 
